@@ -237,7 +237,7 @@
                                     {
                                         "expression": {
                                             "expression": false,
-                                            "value": "Tokyo"
+                                            "value": "Manchester"
                                         },
                                         "targetPath": {
                                             "value": "$city"
