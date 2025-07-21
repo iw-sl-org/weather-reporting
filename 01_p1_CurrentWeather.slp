@@ -6,27 +6,27 @@
     "class_version": 9,
     "link_map": {
         "link100": {
-            "dst_id": "11111111-1111-1111-1111-000000000002",
+            "dst_id": "11111111-1111-1111-1111-000000000001",
             "dst_view_id": "input0",
             "src_id": "11111111-1111-1111-1111-000000000000",
             "src_view_id": "output0"
         },
         "link101": {
-            "dst_id": "11111111-1111-1111-1111-000000000003",
+            "dst_id": "11111111-1111-1111-1111-000000000002",
             "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000002",
+            "src_id": "11111111-1111-1111-1111-000000000001",
             "src_view_id": "outputResponse"
         },
         "link117": {
-            "dst_id": "11111111-1111-1111-1111-000000000005",
-            "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000004",
-            "src_view_id": "output0"
-        },
-        "link120": {
             "dst_id": "11111111-1111-1111-1111-000000000004",
             "dst_view_id": "input0",
             "src_id": "11111111-1111-1111-1111-000000000003",
+            "src_view_id": "output0"
+        },
+        "link120": {
+            "dst_id": "11111111-1111-1111-1111-000000000003",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000002",
             "src_view_id": "output0"
         }
     },
@@ -51,26 +51,8 @@
                 "value": null
             }
         },
-        "input": {
-            "11111111-1111-1111-1111-000000000001_in": {
-                "label": {
-                    "value": "Directory Browser - Input view"
-                },
-                "view_type": {
-                    "value": "document"
-                }
-            }
-        },
-        "output": {
-            "11111111-1111-1111-1111-000000000001_out": {
-                "label": {
-                    "value": "Directory Browser - Output view"
-                },
-                "view_type": {
-                    "value": "document"
-                }
-            }
-        },
+        "input": {},
+        "output": {},
         "settings": {
             "error_param_table": {
                 "value": []
@@ -148,18 +130,6 @@
             },
             "11111111-1111-1111-1111-000000000001": {
                 "error": {},
-                "grid_x_int": 2,
-                "grid_y_int": 2,
-                "index": null,
-                "input": {},
-                "output": {},
-                "recommendation_id": null,
-                "rot_int": 0,
-                "rot_tail_int": 0,
-                "source": "snap catagory"
-            },
-            "11111111-1111-1111-1111-000000000002": {
-                "error": {},
                 "grid_x_int": 3,
                 "grid_y_int": 1,
                 "index": null,
@@ -170,7 +140,7 @@
                 "rot_tail_int": 0,
                 "source": "snap catagory"
             },
-            "11111111-1111-1111-1111-000000000003": {
+            "11111111-1111-1111-1111-000000000002": {
                 "error": {},
                 "grid_x_int": 4,
                 "grid_y_int": 1,
@@ -182,7 +152,7 @@
                 "rot_tail_int": 0,
                 "source": "iris placeholder"
             },
-            "11111111-1111-1111-1111-000000000004": {
+            "11111111-1111-1111-1111-000000000003": {
                 "error": {},
                 "grid_x_int": 5,
                 "grid_y_int": 1,
@@ -194,7 +164,7 @@
                 "rot_tail_int": 0,
                 "source": "snap catagory"
             },
-            "11111111-1111-1111-1111-000000000005": {
+            "11111111-1111-1111-1111-000000000004": {
                 "error": {},
                 "grid_x_int": 6,
                 "grid_y_int": 1,
@@ -282,91 +252,9 @@
             }
         },
         "11111111-1111-1111-1111-000000000001": {
-            "class_id": "com-snaplogic-snaps-binary-directorybrowser",
-            "class_version": 1,
-            "instance_id": "11111111-1111-1111-1111-000000000001",
-            "property_map": {
-                "account": {
-                    "account_ref": {
-                        "value": {}
-                    }
-                },
-                "error": {
-                    "error0": {
-                        "label": {
-                            "value": "error0"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    },
-                    "error_behavior": {
-                        "value": "fail"
-                    }
-                },
-                "info": {
-                    "label": {
-                        "value": "Directory Browser"
-                    },
-                    "notes": {}
-                },
-                "input": {
-                    "in": {
-                        "label": {
-                            "value": "Input view"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    }
-                },
-                "output": {
-                    "out": {
-                        "label": {
-                            "value": "Output view"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    }
-                },
-                "settings": {
-                    "Directory": {
-                        "expression": false,
-                        "value": null
-                    },
-                    "Filter": {
-                        "expression": false,
-                        "value": "*"
-                    },
-                    "advancedProperties": {
-                        "value": []
-                    },
-                    "execution_mode": {
-                        "value": "Validate & Execute"
-                    },
-                    "ignoreEmptyResult": {
-                        "value": true
-                    },
-                    "retries": {
-                        "expression": false,
-                        "value": 0
-                    },
-                    "retryInterval": {
-                        "expression": false,
-                        "value": 1
-                    },
-                    "s3SubfolderMetadataProp": {
-                        "value": true
-                    }
-                },
-                "view_serial": 100
-            }
-        },
-        "11111111-1111-1111-1111-000000000002": {
             "class_id": "com-snaplogic-snaps-apisuite-httpclient",
             "class_version": 1,
-            "instance_id": "11111111-1111-1111-1111-000000000002",
+            "instance_id": "11111111-1111-1111-1111-000000000001",
             "property_map": {
                 "account": {
                     "account_ref": {
@@ -665,10 +553,10 @@
                 "view_serial": 100
             }
         },
-        "11111111-1111-1111-1111-000000000003": {
+        "11111111-1111-1111-1111-000000000002": {
             "class_id": "com-snaplogic-snaps-transform-datatransform",
             "class_version": 4,
-            "instance_id": "11111111-1111-1111-1111-000000000003",
+            "instance_id": "11111111-1111-1111-1111-000000000002",
             "property_map": {
                 "error": {
                     "error0": {
@@ -779,10 +667,10 @@
                 "view_serial": 100
             }
         },
-        "11111111-1111-1111-1111-000000000004": {
+        "11111111-1111-1111-1111-000000000003": {
             "class_id": "com-snaplogic-snaps-transform-jsonformatter",
             "class_version": 2,
-            "instance_id": "11111111-1111-1111-1111-000000000004",
+            "instance_id": "11111111-1111-1111-1111-000000000003",
             "property_map": {
                 "error": {
                     "error0": {
@@ -869,10 +757,10 @@
                 "view_serial": 100
             }
         },
-        "11111111-1111-1111-1111-000000000005": {
+        "11111111-1111-1111-1111-000000000004": {
             "class_id": "com-snaplogic-snaps-binary-write",
             "class_version": 3,
-            "instance_id": "11111111-1111-1111-1111-000000000005",
+            "instance_id": "11111111-1111-1111-1111-000000000004",
             "property_map": {
                 "account": {
                     "account_ref": {
