@@ -78,13 +78,13 @@ jobs:
       - name: sl-run-prod-test-pipeline
         run: python .github/scripts/sl-run-test-pipeline.py "${{ secrets.SL_EMAIL }}" "${{ secrets.SL_PW }}" "$SL_TARGET_ORG" "$SL_TARGET_PSPACE" "$SL_TARGET_PROJECT" "$SL_TEST_TASK"
 
-  #pete-upsert-documentation:
-  #  needs: sl-run-test-pipeline
-  #  runs-on: ubuntu-latest
-  #  steps:
-  #    - uses: actions/checkout@v4
-  #    - name: pete-upsert-documentation
-  #      run: python .github/scripts/pete-upsert-documentation.py "${{ secrets.PETE_EMAIL }}" "${{ secrets.PETE_PW }}" "${{ secrets.PETE_KEY }}" "$SL_TARGET_ORG" "$SL_TARGET_PSPACE" "$SL_TARGET_PROJECT" "$PETE_TARGET_SYSTEM" "$PETE_MAIN_PAGE"
+  pete-upsert-documentation:
+   needs: sl-run-test-pipeline
+   runs-on: ubuntu-latest
+   steps:
+     - uses: actions/checkout@v4
+     - name: pete-upsert-documentation
+       run: python .github/scripts/pete-upsert-documentation.py "${{ secrets.PETE_EMAIL }}" "${{ secrets.PETE_PW }}" "${{ secrets.PETE_KEY }}" "$SL_TARGET_ORG" "$SL_TARGET_PSPACE" "$SL_TARGET_PROJECT" "$PETE_TARGET_SYSTEM" "$PETE_MAIN_PAGE"
 
   gh-delete-artifacts:
       runs-on: ubuntu-latest
