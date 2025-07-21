@@ -1,0 +1,48 @@
+name: sl-pre-checkout-validation
+run-name: ${{ github.actor }} triggered sl-pre-checkout-validation workflow.
+on:
+    pull_request:
+      types: [opened]
+      branches:
+        - test
+env:
+  # SL - SnapLogic
+  # PETE - Pete Virtual Assistant
+    SL_SOURCE_ORG: Interworks-Partner
+    SL_TARGET_ORG: Interworks-Partner
+    SL_SOURCE_PSPACE: ci-cd-github
+    SL_TARGET_PSPACE: ci-cd-github-test
+    SL_SOURCE_PROJECT: weather-reporting
+    SL_TARGET_PROJECT: weather-reporting-test
+    SL_TEST_TASK: 00_Test_PipelineTask
+
+jobs:
+    # pipelines-quality-check:
+    #     runs-on: ubuntu-latest
+    #     steps:
+    #         - name: repository-checkout
+    #           uses: actions/checkout@v4
+            
+    #         - name: pipeline-health-check
+    #           run: python .github/scripts/pipeline-linter.py "${{ secrets.SL_EMAIL }}" "${{ secrets.SL_PW }}" "$SL_SOURCE_ORG" "$SL_SOURCE_PSPACE" "$SL_SOURCE_PROJECT"
+    
+    #         - name: uploading-pipelines-health-report
+    #           uses: actions/upload-artifact@v4
+    #           with:
+    #             name: pipelines-health-report
+    #             path: pipelines-health-report.csv
+
+    pete-code-review:
+        runs-on: ubuntu-latest
+        steps:
+            - name: repository-checkout
+              uses: actions/checkout@v4
+            
+            - name: pipeline-health-check
+              run: python .github/scripts/pete-code-review.py "${{ secrets.PETE_EMAIL }}" "${{ secrets.PETE_PW }}" "${{ secrets.PETE_KEY }}" "$SL_SOURCE_ORG" "$SL_SOURCE_PSPACE" "$SL_SOURCE_PROJECT"
+    
+            - name: uploading-pipelines-health-report
+              uses: actions/upload-artifact@v4
+              with:
+                name: code-review-report
+                path: code-review-report.json
