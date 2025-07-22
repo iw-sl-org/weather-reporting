@@ -1,7 +1,4 @@
 {
-    "ai_map": {
-        "footprint": "H4sIAAAAAAAAA8srzckBAE/8yyUEAAAA"
-    },
     "class_id": "com-snaplogic-pipeline",
     "class_version": 9,
     "link_map": {
@@ -16,18 +13,6 @@
             "dst_view_id": "input0",
             "src_id": "11111111-1111-1111-1111-000000000001",
             "src_view_id": "outputResponse"
-        },
-        "link121": {
-            "dst_id": "11111111-1111-1111-1111-000000000004",
-            "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000003",
-            "src_view_id": "output0"
-        },
-        "link122": {
-            "dst_id": "11111111-1111-1111-1111-000000000003",
-            "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000002",
-            "src_view_id": "output0"
         }
     },
     "property_map": {
@@ -42,7 +27,7 @@
             },
             "label": {},
             "notes": {
-                "value": "This is a description for the Current weather process derived from the SnapLogic pipeline itself."
+                "value": null
             },
             "pipeline_doc_uri": {
                 "value": null
@@ -52,8 +37,20 @@
             }
         },
         "input": {},
-        "output": {},
+        "output": {
+            "11111111-1111-1111-1111-000000000002_output0": {
+                "label": {
+                    "value": "Map - Weather Info - output0"
+                },
+                "view_type": {
+                    "value": "document"
+                }
+            }
+        },
         "settings": {
+            "cache_pipelines": {
+                "value": []
+            },
             "error_param_table": {
                 "value": []
             },
@@ -65,48 +62,7 @@
                 "value": []
             },
             "param_table": {
-                "value": [
-                    {
-                        "capture": {
-                            "value": true
-                        },
-                        "data_type": {
-                            "value": "string"
-                        },
-                        "description": {
-                            "value": "Initial request from the source system."
-                        },
-                        "key": {
-                            "value": "requestID"
-                        },
-                        "required": {
-                            "value": false
-                        },
-                        "value": {
-                            "value": null
-                        }
-                    },
-                    {
-                        "capture": {
-                            "value": true
-                        },
-                        "data_type": {
-                            "value": "string"
-                        },
-                        "description": {
-                            "value": "Name of the city"
-                        },
-                        "key": {
-                            "value": "city"
-                        },
-                        "required": {
-                            "value": false
-                        },
-                        "value": {
-                            "value": null
-                        }
-                    }
-                ]
+                "value": []
             },
             "suspendable": {
                 "value": false
@@ -118,63 +74,39 @@
         "detail_map": {
             "11111111-1111-1111-1111-000000000000": {
                 "error": {},
-                "grid_x_int": 2,
-                "grid_y_int": 1,
+                "grid_x_int": 3,
+                "grid_y_int": 3,
                 "index": null,
                 "input": {},
                 "output": {},
                 "recommendation_id": null,
                 "rot_int": 0,
                 "rot_tail_int": 0,
-                "source": "snap catagory"
+                "source": ""
             },
             "11111111-1111-1111-1111-000000000001": {
                 "error": {},
-                "grid_x_int": 3,
-                "grid_y_int": 1,
+                "grid_x_int": 4,
+                "grid_y_int": 3,
                 "index": null,
                 "input": {},
                 "output": {},
                 "recommendation_id": null,
                 "rot_int": 0,
                 "rot_tail_int": 0,
-                "source": "snap catagory"
+                "source": ""
             },
             "11111111-1111-1111-1111-000000000002": {
                 "error": {},
-                "grid_x_int": 4,
-                "grid_y_int": 1,
-                "index": 0,
-                "input": {},
-                "output": {},
-                "recommendation_id": "d174c2c7-c7be-c018-4713-f91af4fdef88_0",
-                "rot_int": 0,
-                "rot_tail_int": 0,
-                "source": "iris placeholder"
-            },
-            "11111111-1111-1111-1111-000000000003": {
-                "error": {},
                 "grid_x_int": 5,
-                "grid_y_int": 1,
+                "grid_y_int": 3,
                 "index": null,
                 "input": {},
                 "output": {},
                 "recommendation_id": null,
                 "rot_int": 0,
                 "rot_tail_int": 0,
-                "source": "snap catagory"
-            },
-            "11111111-1111-1111-1111-000000000004": {
-                "error": {},
-                "grid_x_int": 6,
-                "grid_y_int": 1,
-                "index": null,
-                "input": {},
-                "output": {},
-                "recommendation_id": null,
-                "rot_int": 0,
-                "rot_tail_int": 0,
-                "source": "snap catagory"
+                "source": ""
             }
         },
         "pan_x_num": 0,
@@ -662,194 +594,6 @@
                                 ]
                             }
                         }
-                    }
-                },
-                "view_serial": 100
-            }
-        },
-        "11111111-1111-1111-1111-000000000003": {
-            "class_id": "com-snaplogic-snaps-transform-csvformatter",
-            "class_version": 3,
-            "instance_id": "11111111-1111-1111-1111-000000000003",
-            "property_map": {
-                "error": {
-                    "error0": {
-                        "label": {
-                            "value": "error0"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    },
-                    "error_behavior": {
-                        "value": "fail"
-                    }
-                },
-                "info": {
-                    "label": {
-                        "value": "CSV Formatter"
-                    }
-                },
-                "input": {
-                    "input0": {
-                        "label": {
-                            "value": "input0"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    }
-                },
-                "output": {
-                    "output0": {
-                        "label": {
-                            "value": "output0"
-                        },
-                        "view_type": {
-                            "value": "binary"
-                        }
-                    }
-                },
-                "settings": {
-                    "charset": {
-                        "value": "UTF-8"
-                    },
-                    "delimiter": {
-                        "expression": false,
-                        "value": ","
-                    },
-                    "errorPolicy": {
-                        "value": "Default"
-                    },
-                    "escapeChar": {
-                        "value": "\\"
-                    },
-                    "execution_mode": {
-                        "value": "Validate & Execute"
-                    },
-                    "ignoreEmptyStream": {
-                        "value": false
-                    },
-                    "newlineCharacter": {
-                        "value": "LF"
-                    },
-                    "outputHeader": {
-                        "value": [
-                            {
-                                "expression": {
-                                    "expression": true,
-                                    "value": ""
-                                }
-                            }
-                        ]
-                    },
-                    "quoteCharacter": {
-                        "value": "\""
-                    },
-                    "quoteMode": {
-                        "value": "ALL"
-                    },
-                    "useDefinedHeader": {
-                        "value": false
-                    },
-                    "writeBOM": {
-                        "value": false
-                    },
-                    "writeHeader": {
-                        "value": true
-                    }
-                },
-                "view_serial": 100
-            }
-        },
-        "11111111-1111-1111-1111-000000000004": {
-            "class_id": "com-snaplogic-snaps-binary-write",
-            "class_version": 3,
-            "instance_id": "11111111-1111-1111-1111-000000000004",
-            "property_map": {
-                "account": {
-                    "account_ref": {
-                        "value": {}
-                    }
-                },
-                "error": {
-                    "error0": {
-                        "label": {
-                            "value": "error0"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    },
-                    "error_behavior": {
-                        "value": "fail"
-                    }
-                },
-                "info": {
-                    "label": {
-                        "value": "File Writer"
-                    },
-                    "notes": {}
-                },
-                "input": {
-                    "input0": {
-                        "label": {
-                            "value": "input0"
-                        },
-                        "view_type": {
-                            "value": "binary"
-                        }
-                    }
-                },
-                "output": {},
-                "settings": {
-                    "UserPermissionsKey": {
-                        "value": []
-                    },
-                    "advancedProperties": {
-                        "value": []
-                    },
-                    "cannedAcls": {
-                        "value": "None"
-                    },
-                    "createDir": {
-                        "value": false
-                    },
-                    "executable_during_suggest": {
-                        "value": false
-                    },
-                    "execution_mode": {
-                        "value": "Execute only"
-                    },
-                    "fileAction": {
-                        "value": "OVERWRITE"
-                    },
-                    "filename": {
-                        "expression": false,
-                        "value": "Temperatures.csv"
-                    },
-                    "flushIntervalKb": {
-                        "value": -1
-                    },
-                    "preventURLEncoding": {
-                        "value": false
-                    },
-                    "retries": {
-                        "expression": false,
-                        "value": 0
-                    },
-                    "retryInterval": {
-                        "expression": false,
-                        "value": 1
-                    },
-                    "validate": {
-                        "value": false
-                    },
-                    "writeEmptyFile": {
-                        "value": false
-                    },
-                    "writeHeader": {
-                        "value": false
                     }
                 },
                 "view_serial": 100
